@@ -1,6 +1,6 @@
-FROM phasecorex/red-discordbot
+FROM phasecorex/red-discordbot:full
 
-RUN apt-get update; \
+RUN apt-get update ; apt-get upgrade -y; \
     apt-get install -y --no-install-recommends \
         sshpass \
     ; \

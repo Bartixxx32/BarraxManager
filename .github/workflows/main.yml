@@ -3,10 +3,13 @@ name: ci
 on:
   push:
     branches: master
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '0 0 * * 0'
 
 jobs:
   multi:
-    runs-on: Ubuntu-20.04
+    runs-on: Ubuntu-latest
     steps:
       -
         name: Checkout
